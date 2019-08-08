@@ -1,11 +1,10 @@
-const createError = require("http-errors");
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-const sassMiddleware = require("node-sass-middleware");
-
-const routes = require("./app/routes");
+import createError from "http-errors";
+import express from "express";
+import path from "path";
+import cookieParser from "cookie-parser";
+import logger from "morgan";
+import sassMiddleware from "node-sass-middleware";
+import routes from "./config/routes.js";
 
 class App {
   constructor() {

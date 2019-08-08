@@ -1,9 +1,9 @@
 {
-  "name": "tutsjs",
+  "name": "starter-project-nodejs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon --exec sucrase-node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -20,6 +20,7 @@
     "sequelize-cli": "^5.5.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "sucrase": "^3.10.1"
   }
 }
