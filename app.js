@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const sassMiddleware = require("node-sass-middleware");
 
 const routes = require("./app/routes");
 
@@ -24,6 +25,14 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(cookieParser());
+    this.app.use(
+      sassMiddleware({
+        src: path.join(__dirname, "public"),
+        dest: path.join(__dirname, "public"),
+        indentedSyntax: true,
+        outputStyle: "compressed"
+      })
+    );
     this.app.use(express.static(path.join(__dirname, "public")));
   };
 
