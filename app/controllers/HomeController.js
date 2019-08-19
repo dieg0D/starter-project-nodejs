@@ -1,7 +1,9 @@
-const HomeController = {
-  index: (req, res) => {
+class HomeController {
+  index = (req, res) => {
     res.render("index", { title: "Express" });
-  }
-};
+  };
 
-module.exports = HomeController;
+  
+}
+
+export default new HomeController();

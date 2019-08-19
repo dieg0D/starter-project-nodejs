@@ -4,7 +4,7 @@ module.exports = {
   development: {
     username: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
-    database: 'nude-develop',
+    database: 'node-develop',
     host: process.env.DATABASE_HOST,
     dialect: 'postgres',
     operatorAliases: false,
@@ -16,7 +16,7 @@ module.exports = {
   test: {
     username: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
-    database: 'nude-test',
+    database: 'node-test',
     host: process.env.DATABASE_HOST,
     dialect: 'postgres',
     operatorAliases: false,

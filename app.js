@@ -12,6 +12,7 @@ class App {
     this.views();
     this.middlewares();
     this.router();
+    this.exceptionHandler();
   }
 
   views = () => {
@@ -28,7 +29,6 @@ class App {
       sassMiddleware({
         src: path.join(__dirname, "public"),
         dest: path.join(__dirname, "public"),
-        indentedSyntax: true,
         outputStyle: "compressed"
       })
     );
@@ -39,7 +39,7 @@ class App {
     this.app.use("/", routes);
   };
 
-  errorHandle = () => {
+  exceptionHandler = () => {
     this.app.use((req, res, next) => {
       next(createError(404));
     });
